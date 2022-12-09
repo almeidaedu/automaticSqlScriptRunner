@@ -1,0 +1,22 @@
+{
+  "name": "botexecsql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "detect-file-encoding-and-language": "^2.3.1",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.3",
+    "mssql": "^9.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.25.8",
+    "shelljs": "^0.8.5"
+  }
+}
