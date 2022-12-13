@@ -50,7 +50,7 @@ const bot = async () => {
         );
 
         const outputPromise = await sequelize.query(data);
-        Promise.all([outputPromise]);
+        Promise.resolve(outputPromise);
 
         //TODO
         //Use a webhook to send messages (discord or slack)
@@ -63,7 +63,7 @@ const bot = async () => {
         });
 
         const mongoPromise = await insertScriptLog.save({});
-        Promise.all([mongoPromise]);
+        Promise.resolve(mongoPromise);
       } catch (error) {
         console.log(`catch Error: ${error}`);
         //TODO
@@ -76,7 +76,7 @@ const bot = async () => {
           Status: false,
         });
         const mongoPromise = await insertScriptLog.save({});
-        Promise.all([mongoPromise]);
+        Promise.resolve(mongoPromise);
 
         fs.appendFileSync(
           `${repositoryName}/${yesterday}/${solicitationNames[i]}/deployError.log`,
